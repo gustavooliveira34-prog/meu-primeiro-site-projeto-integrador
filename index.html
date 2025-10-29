@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validação com JS Externo</title>
+</head>
+<body>
+  <h2>Validação de E-mail e Telefone</h2>
+
+  <!-- Formulário simples -->
+  <form onsubmit="validarFormulario(event)">
+    <label for="email">E-mail:</label><br>
+    <input type="text" id="email" placeholder="exemplo@email.com"><br><br>
+
+    <label for="telefone">Telefone:</label><br>
+    <input type="text" id="telefone" placeholder="(11) 98765-4321"><br><br>
+
+    <button type="submit">Validar</button>
+  </form>
+
+  <!-- Onde o resultado será exibido -->
+  <p id="resultado"></p>
+
+  <!-- Ligação do arquivo externo JavaScript -->
+  <!-- O atributo 'defer' faz o JS carregar depois do HTML -->
+  <script src="script.js" defer></script>
+</body>
+</html>
