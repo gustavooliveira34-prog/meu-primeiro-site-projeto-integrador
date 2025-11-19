@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Validação com JS Externo</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Biblioteca</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h2>Validação de E-mail e Telefone</h2>
+    <div class="login-container">
+        <h1>Bem-vindo à Biblioteca</h1>
+        <form id="login-form">
+            <div class="input-container">
+                <label for="username">Usuário</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Entrar</button>
+        </form>
+        <p>Não tem uma conta? <a href="sobre.html">Saiba mais sobre a biblioteca</a></p>
+    </div>
 
-  <!-- Formulário simples -->
-  <form onsubmit="validarFormulario(event)">
-    <label for="email">E-mail:</label><br>
-    <input type="text" id="email" placeholder="exemplo@email.com"><br><br>
-
-    <label for="telefone">Telefone:</label><br>
-    <input type="text" id="telefone" placeholder="(11) 98765-4321"><br><br>
-
-    <button type="submit">Validar</button>
-  </form>
-
-  <!-- Onde o resultado será exibido -->
-  <p id="resultado"></p>
-
-  <!-- Ligação do arquivo externo JavaScript -->
-  <!-- O atributo 'defer' faz o JS carregar depois do HTML -->
-  <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
