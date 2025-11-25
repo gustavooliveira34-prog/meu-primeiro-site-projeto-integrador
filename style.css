@@ -1,95 +1,125 @@
-/* Estilos Gerais */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
     margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #f2f2f2;
 }
 
-/* Estilos para o formulário de login */
-.login-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+header {
+    background-color: #2b4b7c;
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
-    max-width: 400px;
-    width: 100%;
 }
 
-.login-container h1 {
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.input-container {
-    margin-bottom: 15px;
-}
-
-.input-container label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: #555;
-}
-
-.input-container input {
-    width: 100%;
+nav {
+    background-color: #1f3558;
+    text-align: center;
     padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-p {
-    font-size: 14px;
-    color: #555;
-}
-
-a {
-    color: #4CAF50;
+nav a {
+    color: #fff;
     text-decoration: none;
+    margin: 0 15px;
+    font-weight: 700;
 }
 
-a:hover {
+nav a:hover {
     text-decoration: underline;
 }
 
-/* Estilos para a página sobre */
-.sobre-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+.hidden {
+    display: none;
+}
+
+.busca,
+.form-add-livro,
+.form-login {
     text-align: center;
+    margin: 20px;
 }
 
-.sobre-container h1 {
-    color: #333;
+button,
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
 }
 
-.sobre-container p {
-    color: #666;
-    font-size: 16px;
-    line-height: 1.6;
+button {
+    background-color: #2b4b7c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }
+
+button:hover {
+    background-color: #1f3558;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.livro {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 200px;
+    margin: 15px;
+    text-align: center;
+    padding: 15px;
+    transition: .3s;
+}
+
+.livro:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+.livro img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.livro h3 {
+    color: #2b4b7c;
+    margin: 10px 0 5px;
+}
+
+.livro p {
+    font-size: 14px;
+    color: #555;
+}
+
+#leitura {
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+#pdfView {
+    width: 100%;
+    height: 600px;
+    border: none;
+}
+
+footer {
+    background-color: #2b4b7c;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.logout-btn {
+    background-color: #b94a48;
+}
+
+.logout-btn:hover {
+    background-color: #a94442;
+}
+
