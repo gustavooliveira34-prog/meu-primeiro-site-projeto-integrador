@@ -1,29 +1,62 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Biblioteca</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Biblioteca Virtual 3.0</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="login-container">
-        <h1>Bem-vindo à Biblioteca</h1>
-        <form id="login-form">
-            <div class="input-container">
-                <label for="username">Usuário</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="input-container">
-                <label for="password">Senha</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit">Entrar</button>
-        </form>
-        <p>Não tem uma conta? <a href="sobre.html">Saiba mais sobre a biblioteca</a></p>
-    </div>
+    <header>
+        <h1>📚 Biblioteca Virtual 3.0</h1>
+        <p>Explore, leia e aprenda com nossa coleção digital!</p>
+    </header>
+
+    <nav>
+        <a href="#" onclick='mostrarSeção("livros")'>Livros</a>
+        <a href="#" onclick='mostrarSeção("adicionar")'>Adicionar Livro</a>
+        <a href="#" onclick='mostrarSeção("login")'>Login</a>
+    </nav>
+
+    <section id="login" class="form-login">
+        <h2>👤 Login / Cadastro</h2>
+        <input type="text" id="usuario" placeholder="Usuário"><br><br>
+        <input type="password" id="senha" placeholder="Senha"><br><br>
+        <button onclick="login()">Entrar</button>
+        <button onclick="cadastrar()">Cadastrar</button>
+    </section>
+
+    <section class="busca" id="busca">
+        <input type="text" id="campoBusca" placeholder="Buscar livro ou autor..." onkeyup="buscarLivros()">
+        <button>🔍 Buscar</button>
+        <button class="logout-btn hidden" id="btnLogout" onclick="logout()">Sair</button>
+    </section>
+
+    <section id="adicionar" class="form-add-livro hidden">
+        <h2>➕ Adicionar Livro</h2>
+        <input type="text" id="tituloLivro" placeholder="Título do livro"><br><br>
+        <input type="text" id="autorLivro" placeholder="Autor do livro"><br><br>
+        <input type="text" id="urlCapa" placeholder="URL da capa (opcional)"><br><br>
+        <input type="text" id="urlPDF" placeholder="URL do PDF (opcional)"><br><br>
+        <button onclick="adicionarLivro()">Adicionar</button>
+    </section>
+
+    <main id="livros"></main>
+
+    <section id="leitura" class="hidden">
+        <h2 id="tituloLeitura"></h2>
+        <p id="autorLeitura"></p>
+        <iframe id="pdfView" src=""></iframe>
+        <button onclick='mostrarSeção("livros")'>⬅️ Voltar</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Biblioteca Virtual. Todos os direitos reservados.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
+
 
